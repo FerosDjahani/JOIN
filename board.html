@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="./style/adToTask.css">
+    <link rel="stylesheet" href="./style/backlog.css">
+    <link rel="stylesheet" href="./style/board.css">
+    <link rel="stylesheet" href="./style/datenschutz.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/general.css">
+    <link rel="stylesheet" href="./style/impressum.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/mobile.css">
+    <link rel="stylesheet" href="./style/help.css">
+    <link rel="stylesheet" href="./templates/menu.css">
+    <script src="./mini_backend.js"></script>
+    <script src="./templates/script.js"></script>
+    <script src="./script/adToTask.js"></script>
+    <script src="./script/backlog.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/login.js"></script>
+
+    <title>Join</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/faviconblau.ico">
+</head>
+
+
+<body id="body" onload="start()">
+    <div id="container" class="container">
+
+
+        <div id="menu" class="menu background_color">
+            <div class="menu-content " w3-include-html="./templates/menu.html"></div>
+        </div>
+
+
+        <div id="workspace" class="workspace">
+            <div class="board-container">
+                <div class="task-container">
+                    <h2>to do</h2>
+                    <div ondragover="allowDrop(event)" ondrop="moveTo('toDoTask')" id="toDoTask" class="task"></div>
+                </div>
+                <div class="task-container">
+                    <h2>in progress</h2>
+                    <div ondragover="allowDrop(event)" ondrop="moveTo('progressTask')" id="progressTask" class="task"></div>
+                </div>
+                <div class="task-container">
+                    <h2>testing</h2>
+                    <div ondragover="allowDrop(event)" ondrop="moveTo('testingTask')" id="testingTask" class="task"></div>
+                </div>
+                <div class="task-container">
+                    <h2>done</h2>
+                    <div ondragover="allowDrop(event)" ondrop="moveTo('doneTask')" id="doneTask" class="task"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupBackground" class="popup_background d-none">
+
+        <div id="ticket_popup" class="ticket_popup">
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>

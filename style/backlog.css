@@ -1,0 +1,162 @@
+.backlogspace{
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.backlog-header {
+    margin: 0rem 2rem 1rem 2rem;
+}
+
+.backlog-header h1 {
+    margin-top: 60px;
+    margin-bottom: 0;
+    
+}
+
+.backlog-header > p {
+    color: rgba(32, 49, 146, 0.7);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3vh;
+}
+
+/* table {
+    margin-top: 2rem;
+    width: 100%;
+} */
+
+/* tr {
+    text-align: center;
+} */
+
+.backlog-table-header {
+    margin: 0rem 2rem 1rem 2rem;
+    display: flex;
+    text-transform: uppercase;
+    color: #1E3090;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+/* 
+.backlog-table-header > div {
+    width: 33%;
+} */
+
+.backlog-table-tasks {
+    margin: 0rem 2rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #F4F3FB;
+    height: 70px;
+    border-radius: 0.4rem;
+}
+
+.backlog-table-tasks:hover {
+    background-color: #a7a7a7;
+    height: 70px;
+    cursor: pointer;
+}
+
+/* .backlog-table-tasks > div{
+    width: 33%;
+} */
+
+.dialog-backlog{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-backlog p {
+    height: 200px;
+    width: 300px;
+    background-color: #1E3090;;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.4rem;
+}
+
+.category_color {
+    width: 10px !important;
+    height: 100%;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    display: flex;
+}
+
+.assigned_to_headline {
+    width: 47%;
+    box-sizing: border-box;
+}
+
+.assigned_to {
+    display: flex;
+    align-items: center;
+    width: 47%;
+    box-sizing: border-box;
+    
+}
+
+.category_headline {
+    width: 23%;
+    box-sizing: border-box;
+
+}
+
+.category {
+    width: 23%;
+    box-sizing: border-box;
+}
+
+.cat_desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.backlog_profil_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 4px solid white;
+}
+
+.backlog_profile_placeholder {
+    display: flex;
+    flex-direction: row;
+ 
+
+}
+
+.backlog_description_headline {
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.backlog_description {
+    display: flex;
+    align-items: center;  
+    width: 30%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.backlog_description p {
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+}

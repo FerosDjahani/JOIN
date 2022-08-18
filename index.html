@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="./style/adToTask.css">
+    <link rel="stylesheet" href="./style/backlog.css">
+    <link rel="stylesheet" href="./style/board.css">
+    <link rel="stylesheet" href="./style/datenschutz.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/general.css">
+    <link rel="stylesheet" href="./style/impressum.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/help.css">
+    <link rel="stylesheet" href="./style/mobile.css">
+    <link rel="stylesheet" href="./templates/menu.css">
+    <script src="./mini_backend.js"></script>
+    <script src="./templates/script.js"></script>
+    <script src="./script/adToTask.js"></script>
+    <script src="./script/backlog.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/login.js"></script>
+    <title>Join</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/faviconblau.ico">
+</head>
+
+<body onload="renderAccount()">
+
+    <div id="loginContainer" class="login_container">
+        <div class="login-box">
+
+            <img src="./assets/images/" alt="">
+
+            <div class="log_in">
+                <form onsubmit="event.preventDefault(), login()">
+                    <label for="Username">Username</label>
+                    <input placeholder="Username" id="username" required type="text">
+                    <label for="Password">Password</label>
+                    <input placeholder="Password" id="userpassword" required type="password">
+                    <div style="color: white; font-size: smaller;padding-top: 10px;"> <input id="newAccount" type="checkbox" onclick="switchToSignUp()" /> Create new account</div>
+                    <button id="button" type="submit">Log In</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
