@@ -1,4 +1,4 @@
-input{
+input {
     outline: none;
 }
 
@@ -19,12 +19,11 @@ input::placeholder {
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-image: url('/assets/images/bglogin2.jpg');
+    background-image: url('../assets/images/bglogin2.jpg');
     background-size: cover;
-    
 }
 
-.login-box{
+.login-box {
     background-color: rgba(32, 49, 146, 1);
     height: fit-content;
     display: flex;
@@ -38,24 +37,23 @@ input::placeholder {
     width: 300px;
 }
 
-
-.log_in form{
+.log_in form {
     display: flex;
     flex-direction: column;
 }
 
-.log_in form label{
+.log_in form label {
     color: white;
     padding-left: 20px;
 }
 
-.log_in form input{
+.log_in form input {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
 }
 
-.log_in form button{
+.log_in form button {
     margin-left: 90px;
     margin-right: 90px;
     cursor: pointer;

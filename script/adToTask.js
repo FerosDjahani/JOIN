@@ -12,7 +12,7 @@ let selected = {
 
 
 class CompleteTask {
-    constructor(id, title, dueDate, category, urgency, description, assignedTo, assignedImg, createdAt, position, state){
+    constructor(id, title, dueDate, category, urgency, description, assignedTo, assignedImg, createdAt, position, state) {
         this.id = id;
         this.title = title;
         this.dueDate = dueDate;
@@ -36,13 +36,13 @@ function openDropdown() {
     if (dropdown == false) {
         removeAnimation('fade-out-animation');
         fadeInAvatar();
-            
-       
+
+
     } else if (dropdown == true) {
         removeAnimation('fade-in-animation');
         fadeOutAvatar();
     }
-    
+
 }
 
 function removeAnimation(animation) {
@@ -56,11 +56,11 @@ function addAnimation(animation) {
     document.getElementsByClassName('columnname')[0].classList.add(animation);
     document.getElementsByClassName('columnname')[1].classList.add(animation);
     document.getElementsByClassName('columnname')[2].classList.add(animation);
-    document.getElementsByClassName('columnname')[3].classList.add(animation);   
+    document.getElementsByClassName('columnname')[3].classList.add(animation);
 }
 
 function fadeInAvatar() {
-    setTimeout(()=>{
+    setTimeout(() => {
         addAnimation('fade-in-animation');
         setTimeout(() => {
             removeAnimation('d-none');
@@ -68,19 +68,19 @@ function fadeInAvatar() {
             dropdown = true;
         }, 225)
 
-    },225)
+    }, 225)
 }
 
 function fadeOutAvatar() {
-    setTimeout(()=>{
+    setTimeout(() => {
         addAnimation('fade-out-animation');
-        setTimeout(()=>{
+        setTimeout(() => {
             addAnimation('d-none');
             document.getElementById('avatarPicker').classList.add('d-none');
 
             dropdown = false;
 
-        },225)
+        }, 225)
 
     }, 250)
 }
@@ -112,17 +112,17 @@ function requestForm() {
  * "CompleteTask". 
  */
 function createTask() {
-    generateId = Math.round(Math.random()*10000);
+    generateId = Math.round(Math.random() * 10000);
     let task_title = document.getElementById('title-input');
     let task_due_date = document.getElementById('date-input');
     let task_category = document.getElementById('category-input');
     let task_urgency = document.getElementById('urgency-input');
     let task_description = document.getElementById('description-input');
-    let completeTask = new CompleteTask( generateId, task_title.value, task_due_date.value, task_category.value, 
-    task_urgency.value, task_description.value, selectedUsers, selectImages, new Date().getTime(), 'backlog', 'toDoTask');   
+    let completeTask = new CompleteTask(generateId, task_title.value, task_due_date.value, task_category.value,
+        task_urgency.value, task_description.value, selectedUsers, selectImages, new Date().getTime(), 'backlog', 'toDoTask');
     refreshCreateTaskInputs(task_title.value, task_due_date.value, task_category.value,
-    task_urgency.value, task_description.value);
-    updateAllTasks(completeTask); 
+        task_urgency.value, task_description.value);
+    updateAllTasks(completeTask);
 }
 
 
@@ -134,7 +134,7 @@ function createTask() {
  * @param {string} urgency  - The value from the input with id "urgency-input"
  * @param {string} description  - The value from the input with id "description-input"
  */
-function refreshCreateTaskInputs(title, dueDate, category, urgency, description){
+function refreshCreateTaskInputs(title, dueDate, category, urgency, description) {
     title = '';
     dueDate = '';
     category = '';
@@ -156,12 +156,12 @@ function cancelCompilation() {
  * @param {JSON} completeTask - object created with data source from the input fields. The model of this 
  * object is based on the class "CompleteTask"
  */
-function updateAllTasks(completeTask){
+function updateAllTasks(completeTask) {
     dropdown = false;
     allTasks.push(completeTask);
     saveAllTasks();
-    
-    setTimeout( () => {
+
+    setTimeout(() => {
         window.location = './backlog.html'
     }, 2000)
 }
@@ -170,7 +170,7 @@ function updateAllTasks(completeTask){
 /**
  * With this function we can save the tasks in the backend.
  */
-setURL('http://gruppe-252.developerakademie.net/smallest_backend_ever');
+setURL('https://gruppe-252.developerakademie.net/smallest_backend_ever');
 
 function saveAllTasks() {
     backend.setItem('allTasks', JSON.stringify(allTasks));
@@ -195,10 +195,10 @@ function selectAvatar(id) {
         selected[id] = true;
         document.getElementById(id).classList.add('selected-picture');
         document.getElementById('dialogAdTask').classList.add('d-none')
-        let path = './assets/images/'+ document.getElementById(id).id + '.jpg';
+        let path = './assets/images/' + document.getElementById(id).id + '.jpg';
         selectImages.push(path);
-        selectedUsers.push((' '+id + ' '));
-        
+        selectedUsers.push((' ' + id + ' '));
+
     } else if (selected[id] == true) {
         selected[id] = false;
         document.getElementById(id).classList.remove('selected-picture');
@@ -211,5 +211,5 @@ function today() {
     var today = new Date();
     today = new Date(today.setDate(today.getDate())).toISOString().split('T')[0];
     document.getElementById('date-input').setAttribute('min', today);
-    
+
 }
