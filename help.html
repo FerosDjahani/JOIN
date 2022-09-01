@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <link rel="stylesheet" href="./style/adToTask.css">
-        <link rel="stylesheet" href="./style/backlog.css">
-        <link rel="stylesheet" href="./style/board.css">
-        <link rel="stylesheet" href="./style/datenschutz.css">
-        <link rel="stylesheet" href="./style/font.css">
-        <link rel="stylesheet" href="./style/general.css">
-        <link rel="stylesheet" href="./style/impressum.css">
-        <link rel="stylesheet" href="./style/login.css">
-        <link rel="stylesheet" href="./style/mobile.css">
-        <link rel="stylesheet" href="./style/help.css">
-        <link rel="stylesheet" href="./templates/menu.css">
-        <script src="./mini_backend.js"></script>
-        <script src="./templates/script.js"></script>
-        <script src="./script/adToTask.js"></script>
-        <script src="./script/backlog.js"></script>
-        <script src="./script/board.js"></script>
-        <script src="./script/login.js"></script>
-        <script src="./script/help.js"></script>
-        <title>Join</title>
-        <link rel="icon" type="image/x-icon" href="./assets/images/faviconblau.ico">
-    </head>
-    <body onload="start()">
-        <div id="container" class="container">
-            <div id="menu" class="menu">
-                <div class="menu-content background_color" w3-include-html="./templates/menu.html"></div>
-            </div>
-            <div id="workspace" class="workspace">
-                <div class="content-area help">
-                    <h1>Help</h1>
-                    <h2>ADD-TASK</h2>
-                    <p>To create a new task, please give it a title, due date, category, urgency and a description. At last click on the + button to assign your task to someone. By clicking on "create task" your task will be created.</p>
-                    <img onclick="imgscale('./assets/images/help_addtotask.png')" src="./assets/images/help_addtotask.png" alt="">
-                    <h2>BACKLOG</h2>
-                    <p>The backlog shows the created task.</p>
-                    <img onclick="imgscale('./assets/images/help_backlog.png')" src="./assets/images/help_backlog.png" style="height: 50px;" alt="">
-                    <h2>BOARD</h2>
-                    <p>In the board you can see the tasks that have been added from the backlog. You can simply drag them into the desired column.</p>
-                    <img onclick="imgscale('./assets/images/help_board.png')" src="./assets/images/help_board.png" alt="">
-                </div>
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="./style/adToTask.css">
+    <link rel="stylesheet" href="./style/backlog.css">
+    <link rel="stylesheet" href="./style/board.css">
+    <link rel="stylesheet" href="./style/datenschutz.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/general.css">
+    <link rel="stylesheet" href="./style/impressum.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/mobile.css">
+    <link rel="stylesheet" href="./style/help.css">
+    <link rel="stylesheet" href="./templates/menu.css">
+    <script src="./mini_backend.js"></script>
+    <script src="./templates/script.js"></script>
+    <script src="./script/adToTask.js"></script>
+    <script src="./script/backlog.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/login.js"></script>
+    <script src="./script/help.js"></script>
+    <title>Join</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/faviconblau.ico">
+</head>
+
+<body onload="start()">
+    <div id="container" class="container">
+        <div id="menu" class="menu">
+            <div class="menu-content background_color" w3-include-html="./templates/menu.html"></div>
+        </div>
+        <div id="workspace" class="workspace">
+            <div class="content-area help">
+                <h1>Help</h1>
+                <h2>ADD-TASK</h2>
+                <p>To create a new task, please give it a title, due date, category, urgency and a description. At last click on the + button to assign your task to someone. By clicking on "create task" your task will be created.</p>
+                <img onclick="imgscale('./assets/images/help_addtotask.png')" src="./assets/images/help_addtotask.png" alt="">
+                <h2>BACKLOG</h2>
+                <p>The backlog shows the created task.</p>
+                <img onclick="imgscale('./assets/images/help_backlog.png')" src="./assets/images/help_backlog.png" style="height: 50px;" alt="">
+                <h2>BOARD</h2>
+                <p>In the board you can see the tasks that have been added from the backlog. You can simply drag them into the desired column.</p>
+                <img onclick="imgscale('./assets/images/help_board.png')" src="./assets/images/help_board.png" alt="">
             </div>
         </div>
-        <div id="scaled_img" class= "d-none">
-            <div class="close_scaled_img" onclick="closeScaledImg()">
-                <img class="close-icon" src="./assets/images/close_white.png" alt="">
-                <img id="scaled_img_path" src="" alt="">
-            </div>
-           
+    </div>
+    </div>
+    <div id="scaled_img" class="d-none">
+        <div class="close_scaled_img" onclick="closeScaledImg()">
+            <img class="close-icon" src="./assets/images/close_white.png" alt="">
+            <img id="scaled_img_path" src="" alt="">
         </div>
-    </body>
+
+    </div>
+</body>
+
 </html>

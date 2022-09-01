@@ -1,143 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <link rel="stylesheet" href="./style/adToTask.css">
-        <link rel="stylesheet" href="./style/backlog.css">
-        <link rel="stylesheet" href="./style/board.css">
-        <link rel="stylesheet" href="./style/datenschutz.css">
-        <link rel="stylesheet" href="./style/font.css">
-        <link rel="stylesheet" href="./style/general.css">
-        <link rel="stylesheet" href="./style/impressum.css">
-        <link rel="stylesheet" href="./style/login.css">
-        <link rel="stylesheet" href="./style/mobile.css">
-        <link rel="stylesheet" href="./templates/menu.css">
-        <script src="./mini_backend.js"></script>
-        <script src="./templates/script.js"></script>
-        <script src="./script/adToTask.js"></script>
-        <script src="./script/backlog.js"></script>
-        <script src="./script/board.js"></script>
-        <script src="./script/login.js"></script>
 
-        <title>Join</title>
-        <link rel="icon" type="image/x-icon" href="./assets/images/faviconblau.ico">
-    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="./style/adToTask.css">
+    <link rel="stylesheet" href="./style/backlog.css">
+    <link rel="stylesheet" href="./style/board.css">
+    <link rel="stylesheet" href="./style/datenschutz.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/general.css">
+    <link rel="stylesheet" href="./style/impressum.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/mobile.css">
+    <link rel="stylesheet" href="./templates/menu.css">
+    <script src="./mini_backend.js"></script>
+    <script src="./templates/script.js"></script>
+    <script src="./script/adToTask.js"></script>
+    <script src="./script/backlog.js"></script>
+    <script src="./script/board.js"></script>
+    <script src="./script/login.js"></script>
 
-    <body onload="start()">
-        <div id="container" class="container">
+    <title>Join</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/faviconblau.ico">
 
-            <div id="menu" class="menu">
-                <div class="menu-content background_color" w3-include-html="./templates/menu.html"></div>
-            </div>
-            <div id="workspace" class="workspace">
-                <div class="add-task-main-container">
-                    <div class="headline-container">
-                        <h1>Add Task</h1>
-                        <p>Learning Management System Project</p>
+</head>
 
-                    </div>
-                    <form onsubmit="requestForm()" class="add-task-container">
-        
-                        <div class="top-row">
-                            <div class="title-input-container field-container">
-                                <h2>TITLE</h2>
-                                <input placeholder="Title" required id="title-input" type="text">
-                            </div>
-                            <div class="date-container field-container">
-                                <h2>DUE DATE</h2>
-                                <input onclick="today()" required id="date-input" type="date" min="2022-09-08">
-                            </div>
+<body onload="start()">
+    <div id="container" class="container">
+
+        <div id="menu" class="menu">
+            <div class="menu-content background_color" w3-include-html="./templates/menu.html"></div>
+        </div>
+        <div id="workspace" class="workspace">
+            <div class="add-task-main-container">
+                <div class="headline-container">
+                    <h1>Add Task</h1>
+                    <p>Learning Management System Project</p>
+
+                </div>
+                <form onsubmit="requestForm()" class="add-task-container">
+
+                    <div class="top-row">
+                        <div class="title-input-container field-container">
+                            <h2>TITLE</h2>
+                            <input placeholder="Title" required id="title-input" type="text">
                         </div>
-        
-        
-                        <div class="mid-row">
-                            <div class="category-container field-container">
-                                <h2>CATEGORY</h2>
-                                <div class="select-container">
-                                    <select required name="" id="category-input" >
+                        <div class="date-container field-container">
+                            <h2>DUE DATE</h2>
+                            <input onclick="today()" required id="date-input" type="date" min="2022-09-08">
+                        </div>
+                    </div>
+
+
+                    <div class="mid-row">
+                        <div class="category-container field-container">
+                            <h2>CATEGORY</h2>
+                            <div class="select-container">
+                                <select required name="" id="category-input">
                                         <option value="" style="display:none">Choose Category</option>
                                         <option value="Management">Management</option>
                                         <option value="Software Development">Software Development</option>
                                         <option value="UX/UI Design">UX/UI Design</option>
                                         <option value="Human Ressources">Human Ressources</option>
                                     </select>
-                                    <span class="custom-array"></span>
+                                <span class="custom-array"></span>
 
-                                </div>
                             </div>
-                            <div class="urgency-container field-container">
-                                <h2>URGENCY</h2>
-                                <div class="select-container">
-                                    <select required name="" id="urgency-input">
+                        </div>
+                        <div class="urgency-container field-container">
+                            <h2>URGENCY</h2>
+                            <div class="select-container">
+                                <select required name="" id="urgency-input">
                                         <option value="" style="display:none">Choose Urgency</option>
                                         <option value="High">High</option>
                                         <option value="Intermediate">Intermediate</option>
                                         <option value="Low">Low</option>
                                     </select>
-                                    <span class="custom-array"></span>
+                                <span class="custom-array"></span>
 
-                                </div>
                             </div>
                         </div>
-        
-        
-                        <div class ="bottom-row">
-                            <div class="description-container field-container">
-                                <h2>DESCRIPTION</h2>
-                                <textarea required name="" id="description-input" cols="30" rows="10"></textarea>
+                    </div>
+
+
+                    <div class="bottom-row">
+                        <div class="description-container field-container">
+                            <h2>DESCRIPTION</h2>
+                            <textarea required name="" id="description-input" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="assigned-to-container field-container ">
+                            <h2>ASSIGNED TO</h2>
+                            <div id="addButtonCont" onclick="openDropdown()" class="add-button-container">
+                                <img id="addButton" class="add-button" src="./assets/images/add-icon.png" alt="">
                             </div>
-    
-                            <div class="assigned-to-container field-container ">
-                                <h2>ASSIGNED TO</h2>
-                                <div id="addButtonCont" onclick="openDropdown()" class="add-button-container">
-                                    <img id="addButton"  class="add-button" src="./assets/images/add-icon.png" alt="">
-                                </div>
-                                <div class="placeholder-container">
-    
-                                    <div class="icon-container">
-                                    
-                                        <div id="avatarPicker" class="choose-name-input d-none">
-                                            <div class="avatar-box">
-                                                <div class="columnname d-none">
-                                                    <span class="assigned-name">Kevin</span>
-                                                    <img onclick="selectAvatar('Kevin')" class="profilepicture " id="Kevin" src="./assets/images/Kevin.jpg" alt="">
-                                                </div>
-                                                <div class="columnname d-none">
-                                                    <span class="assigned-name">Feros</span>
-                                                    <img onclick="selectAvatar('Feros')" class="profilepicture " id="Feros" src="./assets/images/Feros.jpg" alt="">
-                                                </div>  
-                                                <div class="columnname d-none">
-                                                    <span class="assigned-name">Norbert</span>
-                                                    <img onclick="selectAvatar('Norbert')" class="profilepicture " id="Norbert" src="./assets/images/Norbert.jpg" alt="">
-                                                </div>  
-                                                <div class="columnname d-none">
-                                                    <span class="assigned-name">Daniel</span>
-                                                    <img onclick="selectAvatar('Daniel')" class="profilepicture " id="Daniel" src="./assets/images/Daniel.jpg" alt="">
-                                                </div>
+                            <div class="placeholder-container">
+
+                                <div class="icon-container">
+
+                                    <div id="avatarPicker" class="choose-name-input d-none">
+                                        <div class="avatar-box">
+                                            <div class="columnname d-none">
+                                                <span class="assigned-name">Kevin</span>
+                                                <img onclick="selectAvatar('Kevin')" class="profilepicture " id="Kevin" src="./assets/images/kevin.jpg" alt="">
+                                            </div>
+                                            <div class="columnname d-none">
+                                                <span class="assigned-name">Feros</span>
+                                                <img onclick="selectAvatar('Feros')" class="profilepicture " id="Feros" src="./assets/images/feros.jpg" alt="">
+                                            </div>
+                                            <div class="columnname d-none">
+                                                <span class="assigned-name">Norbert</span>
+                                                <img onclick="selectAvatar('Norbert')" class="profilepicture " id="Norbert" src="./assets/images/norbert.jpg" alt="">
+                                            </div>
+                                            <div class="columnname d-none">
+                                                <span class="assigned-name">Daniel</span>
+                                                <img onclick="selectAvatar('Daniel')" class="profilepicture " id="Daniel" src="./assets/images/daniel.jpg" alt="">
                                             </div>
                                         </div>
-                                        <div id="dialogAdTask" class="dialog-adToTask d-none">
-                                            <p>Dem Feld <span>Assigned to</span> muss jemanden zugewiesen werden.</p>
-                                        </div>
                                     </div>
-    
-    
-                                    <div class="button-container">
-                                        <button onclick="cancelCompilation()" class="cancel-button">Cancel</button>
-                                        <button id="button-form">Create Task</button>
+                                    <div id="dialogAdTask" class="dialog-adToTask d-none">
+                                        <p>Dem Feld <span>Assigned to</span> muss jemanden zugewiesen werden.</p>
                                     </div>
-    
                                 </div>
+
+
+                                <div class="button-container">
+                                    <button onclick="cancelCompilation()" class="cancel-button">Cancel</button>
+                                    <button id="button-form">Create Task</button>
+                                </div>
+
                             </div>
-                        </div>  
-                    </form>
-    
-                </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
