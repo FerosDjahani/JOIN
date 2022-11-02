@@ -26,14 +26,13 @@ async function renderAccount() {
 function login() {
     let username = document.getElementById('username').value;
     let userpassword = document.getElementById('userpassword').value;
-    if(account.some( user => user.name == username && user.password == userpassword )) {
+    if (account.some(user => user.name == username && user.password == userpassword)) {
         account.forEach(element => {
             checkMatchPhoto(username, element);
         });
-    }
-    else {
+    } else {
         alert('NO USER FOUND WITH USERNAME AND PASSWORD');
-    } 
+    }
 }
 
 
@@ -46,7 +45,7 @@ function checkMatchPhoto(username, element) {
     if (username == element.name) {
         saveImagePath(element.bild);
 
-        setTimeout( () => {
+        setTimeout(() => {
             window.location = `./board.html`;
         }, 1500)
     }
