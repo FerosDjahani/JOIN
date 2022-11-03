@@ -65,6 +65,20 @@ input::placeholder {
     padding-bottom: 5px;
 }
 
+.button2 {
+    margin-left: 90px;
+    margin-right: 90px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(114, 132, 236);
+    color: white;
+}
+
 .login-box img {
     height: 60px;
     padding-top: 10px;
