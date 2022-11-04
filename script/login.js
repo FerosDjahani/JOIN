@@ -6,7 +6,7 @@ class Guest {
 
 let account;
 let currentuser;
-let checkbox;
+let button;
 let textButton;
 
 
@@ -62,9 +62,9 @@ function saveImagePath(imagePath) {
  * create a new account.
  */
 function switchToSignUp() {
-    checkbox = document.getElementById('newAccount');
+    button = document.getElementById('newAccount');
     textButton = document.getElementById('button');
-    if (checkbox.checked == true) {
+    if (button.checked == true) {
         textButton.innerHTML = "Sign Up";
         document.getElementById('button').type = 'button';
         document.getElementById('button').addEventListener("click", AddAccount);
@@ -101,7 +101,7 @@ function AddAccount(username, password) {
  */
 function refreshForm(username, password) {
     event.preventDefault();
-    checkbox.checked = false;
+    button.checked = false;
     document.getElementById('button').innerHTML = "Log In";
     document.getElementById('button').removeEventListener("click", AddAccount);
     document.getElementById('button').type = 'submit';
