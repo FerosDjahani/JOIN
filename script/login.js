@@ -62,17 +62,23 @@ function saveImagePath(imagePath) {
  * create a new account.
  */
 function switchToSignUp() {
+
+
+    textButton.innerHTML = "Login In";
+    document.getElementById('button').type = 'submit';
+
+}
+
+function switchToSignUp2() {
+
     button = document.getElementById('newAccount');
     textButton = document.getElementById('button');
-    if (button.checked == true) {
-        textButton.innerHTML = "Sign Up";
-        document.getElementById('button').type = 'button';
-        document.getElementById('button').addEventListener("click", AddAccount);
+    (button.checked == true)
+    textButton.innerHTML = "Sign Up";
+    document.getElementById('button').type = 'button';
+    document.getElementById('button').addEventListener("click", AddAccount);
+    document.getElementById('newAccount').classList.add('button2');
 
-    } else {
-        textButton.innerHTML = "Login In";
-        document.getElementById('button').type = 'submit';
-    }
 }
 
 
