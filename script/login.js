@@ -35,6 +35,17 @@ function login() {
     }
 }
 
+function login() {
+    let username = document.getElementById('username').value;
+    let userpassword = document.getElementById('userpassword').value;
+    if (account.some(user => user.name == username && user.password == userpassword)) {
+        account.forEach(element => {
+            checkMatchPhoto(username, element);
+        });
+    } else {
+        alert('NO USER FOUND WITH USERNAME AND PASSWORD');
+    }
+}
 
 /**
  * The image of the avatar is chosen according to the transmitted username data.
@@ -77,7 +88,24 @@ function switchToSignUp2() {
     textButton.innerHTML = "Sign Up";
     document.getElementById('button').type = 'button';
     document.getElementById('button').addEventListener("click", AddAccount);
-    document.getElementById('newAccount').classList.add('button2');
+    document.getElementById('button').classList.add('button2');
+
+}
+
+function GuestLogin() {
+
+    button = document.getElementById('newAccount');
+    textButton = document.getElementById('button');
+    document.getElementById('username').value = "guest";
+    document.getElementById('userpassword').value = "guest";
+    (button.checked == true)
+
+    document.getElementById('button').type = 'button';
+    document.getElementById('button').addEventListener("click", AddAccount);
+    document.getElementById('Guest').classList.add('d-none');
+    document.getElementById('button').classList.add('button2');
+    document.getElementById('button').innerHTML = "Guest Log In"
+
 
 }
 
@@ -88,6 +116,7 @@ function switchToSignUp2() {
  * @param {string} password 
  */
 function AddAccount(username, password) {
+
     let newGuest = new Guest();
     username = document.getElementById('username');
     password = document.getElementById('userpassword');
@@ -114,7 +143,7 @@ function refreshForm(username, password) {
     if (username.value && password.value) {
         alert('Your Username and Password is saved and you can log in');
         textButton.classList.add('button2');
-        textButton.innerHTML = "Guest Login In";
+
 
     } else {
         alert('You must give an username and a password!');

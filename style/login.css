@@ -23,14 +23,19 @@ input::placeholder {
     background-size: cover;
 }
 
+.btnlog {
+    margin: 10px;
+}
+
 .login-box {
     background-color: rgba(32, 49, 146, 1);
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
     border-radius: 20px;
-    box-shadow: -2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+    box-shadow: -10px 5px 8px 4px rgb(0, 0, 0, 0.2);
 }
 
 .log_in {
@@ -57,12 +62,11 @@ input::placeholder {
     margin-left: 90px;
     margin-right: 90px;
     cursor: pointer;
-    margin-top: 25px;
-    margin-bottom: 25px;
     border-radius: 5px;
     border: none;
     padding-top: 5px;
     padding-bottom: 5px;
+    width: 120px;
 }
 
 .button2 {
@@ -83,4 +87,12 @@ input::placeholder {
     height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.guest_log_in {
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 105px;
 }

@@ -40,11 +40,16 @@
                     <input placeholder="Username" id="username" required type="text">
                     <label for="Password">Password</label>
                     <input placeholder="Password" id="userpassword" required type="password">
-                    <div style="color: white; font-size: smaller;padding-top: 10px;"> <button id="newAccount" type="button" onclick="switchToSignUp2()">Create new account</button></div>
-                    <button id="button" type="submit">Log In</button>
+
+                    <button class="btnlog" id="button" type="submit">Log In</button>
+                    <button class="btnlog" id="newAccount" type="button" onclick="switchToSignUp2(),alert('Now please give an username and a password and then Sign Up!')">Create Account</button>
+                    <button class="btnlog" id="Guest" type="button" onclick="GuestLogin()">Log in as guest</button>
+
+
                 </form>
 
             </div>
+
         </div>
 
     </div>
